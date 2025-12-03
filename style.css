@@ -1,165 +1,59 @@
-:root {
-    --primary: #6366f1;
-    --primary-hover: #4f46e5;
-    --secondary: #1e293b;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html,
 body {
     height: 100%;
-    font-family: 'Inter', sans-serif;
-    color: var(--text-main);
-    background: var(--bg-gradient);
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-.hero {
+.hero1 {
     height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Barns_grand_tetons.jpg/1200px-Barns_grand_tetons.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+nav {
+    padding: 20px;
+    display: flex;
     justify-content: space-between;
-    padding: 0 10%;
-    gap: 4rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hero-content {
-    max-width: 600px;
-    animation: fadeInLeft 1s ease-out;
-}
-
-.hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(to right, var(--primary), #818cf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.btn {
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    font-size: 1rem;
-}
-
-.btn-primary {
-    background-color: var(--primary);
+.nav-links a {
     color: white;
-    box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+    text-decoration: none;
+    margin-left: 20px;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.23);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--secondary);
-    border: 2px solid var(--secondary);
-}
-
-.btn-secondary:hover {
-    background-color: var(--secondary);
-    color: white;
-}
-
-.hero-visual {
-    flex: 1;
+.hero1-content {
+    flex-grow: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    animation: fadeInRight 1s ease-out;
+    align-items: center;
+    text-align: center;
 }
 
-.visual-circle {
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(45deg, var(--primary), #a5b4fc);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: morph 8s ease-in-out infinite;
-    filter: blur(40px);
-    opacity: 0.8;
+.hero2 {
+    height: 100%;
+    background: darkslateblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-@keyframes morph {
-    0% {
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
-
-    50% {
-        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
-    }
-
-    100% {
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
+h1 {
+    font-size: 4rem;
 }
 
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-    }
-
-    .hero-actions {
-        justify-content: center;
-    }
-
-    .visual-circle {
-        width: 300px;
-        height: 300px;
-    }
+p {
+    font-size: 1.5rem;
 }
